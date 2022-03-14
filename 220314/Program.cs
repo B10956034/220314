@@ -120,7 +120,7 @@ namespace _220314
 
 
 
-            //好的做法
+            //快的做法
             int[] No = { 1, 2, 3, 4, 5 };
             string[] name = { "Jack", "Mary", "Tom", "Grace", "Alice" };
             int[] scoreA = { 80, 65, 100, 98, 83 };
@@ -131,8 +131,19 @@ namespace _220314
             {
                 Console.WriteLine("輸入座號(1-5)");
                 var newNo = Console.ReadLine();
-                int inputA = int.Parse(newNo);
-
+                int newInput = int.Parse(newNo);
+                int arrayIndex = Array.IndexOf(No,newInput);
+                if(arrayIndex > -1)
+                {
+                    Console.WriteLine("姓名：" + name[arrayIndex]);
+                    Console.WriteLine("電腦概論：" + scoreA[arrayIndex]);
+                    Console.WriteLine("程式設計：" + scoreB[arrayIndex]);
+                    Console.WriteLine("動畫設計：" + scoreC[arrayIndex]);
+                }
+                else
+                {
+                    Console.WriteLine("");
+                }
             }
 
 
