@@ -142,7 +142,7 @@ namespace _220314
                 }
                 else
                 {
-                    Console.WriteLine("");
+                    Console.WriteLine("座號超出範圍");
                 }
             }
 
